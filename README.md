@@ -22,6 +22,6 @@ To use the DropDownListChosen, you will need to follow these steps:
             DataPlaceHolder="Type Here..." AllowSingleDeselect="true">                
         </asp:DropDownListChosen> 
 ```
-Bind items to your dropdown list either manually by adding ListItems to the DropDownListChosen or by binding to a DataSource. 
-Datasource example can be found in the downloadable source code above.
-You're done! You can now work with your DropDownListChosen to find what options work best for you. I would love to hear some great feedback if you use this control on your site
+Bind items to your dropdown list either manually by adding ListItems to the DropDownListChosen or by binding to a DataSource.
+
+You're done! You can now work with your DropDownListChosen to find what options work best for you. I would love to hear some great feedback if you use this control on your site.
