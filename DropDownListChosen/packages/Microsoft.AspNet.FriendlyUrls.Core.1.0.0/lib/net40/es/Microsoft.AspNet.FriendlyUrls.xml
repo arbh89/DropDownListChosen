@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.AspNet.FriendlyUrls</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.FriendlyUrl"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.FriendlyUrl.Href(System.String,System.Object[])"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.FriendlyUrl.Resolve(System.String)">
+      <summary> Resuelve una ruta de acceso virtual del controlador de archivos en una URL preparada mediante las resoluciones registradas. </summary>
+      <returns>La URL preparada.</returns>
+      <param name="virtualPath">La ruta de acceso virtual del controlador.</param>
+    </member>
+    <member name="P:Microsoft.AspNet.FriendlyUrls.FriendlyUrl.Segments">
+      <summary> Los segmentos de URL restantes después de que las URL preparadas asignaran la solicitud a un archivo. </summary>
+    </member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings">
+      <summary>Representa la configuración usada al habilitar URL preparadas.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings.#ctor">
+      <summary>Crea una instancia nueva de la clase FriendlyUrlSettings con los valores predeterminados.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings.AutoRedirectMode">
+      <summary>El tipo de redirección que se realizará de URL no preparadas a URL preparadas. El valor predeterminado es Off.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings.ResolverCachingMode"></member>
+    <member name="P:Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings.SwitchViewRouteName">
+      <summary>El nombre de la ruta que controla las solicitudes de usuario para cambiar de vista. El valor predeterminado es "AspNet.FriendlyUrls.SwitchView".</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings.SwitchViewUrl">
+      <summary>La URL a la que se envían las solicitudes de cambio de vista. El valor predeterminado es "__FriendlyUrls_SwitchView/{view}".</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions">
+      <summary>Proporciona métodos de extensión para trabajar con URL preparadas.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions.GetFriendlyUrlFileExtension(System.Web.HttpRequest)">
+      <summary> Devuelve la extensión del archivo al que asignaron la solicitud las direcciones URL preparadas. </summary>
+      <returns>La extensión de archivo, por ejemplo, .aspx.</returns>
+      <param name="httpRequest">El objeto HttpRequest.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions.GetFriendlyUrlFileExtension(System.Web.HttpRequestBase)">
+      <summary> Devuelve la extensión del archivo al que asignaron la solicitud las direcciones URL preparadas. </summary>
+      <returns>La extensión de archivo, por ejemplo, .aspx.</returns>
+      <param name="httpRequest">El objeto HttpRequestBase.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions.GetFriendlyUrlFileVirtualPath(System.Web.HttpRequest)">
+      <summary> Devuelve la ruta de acceso virtual del archivo al que asignaron la solicitud las direcciones URL preparadas. </summary>
+      <returns>La ruta de acceso virtual del archivo.</returns>
+      <param name="httpRequest">El objeto HttpRequest.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions.GetFriendlyUrlFileVirtualPath(System.Web.HttpRequestBase)">
+      <summary> Devuelve la ruta de acceso virtual del archivo al que asignaron la solicitud las direcciones URL preparadas. </summary>
+      <returns>La ruta de acceso virtual del archivo.</returns>
+      <param name="httpRequest">El objeto HttpRequestBase.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions.GetFriendlyUrlSegments(System.Web.HttpRequest)">
+      <summary> Devuelve los segmentos de URL restantes después de que las URL preparadas asignaran la solicitud a un archivo. </summary>
+      <returns>Los segmentos de URL.</returns>
+      <param name="httpRequest">El objeto HttpRequest.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions.GetFriendlyUrlSegments(System.Web.HttpRequestBase)">
+      <summary> Devuelve los segmentos de URL restantes después de que las URL preparadas asignaran la solicitud a un archivo. </summary>
+      <returns>Los segmentos de URL.</returns>
+      <param name="httpRequest">El objeto HttpRequestBase.</param>
+    </member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.PreApplicationStartCode"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.PreApplicationStartCode.Start"></member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.RedirectMode">
+      <summary>Representa el modo de redirección que se usa al redirigir automáticamente a direcciones URL preparadas.</summary>
+    </member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.RedirectMode.Permanent">
+      <summary>Realiza una redirección permanente (código de respuesta 301).</summary>
+    </member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.RedirectMode.Temporary">
+      <summary>Realiza una redirección temporal (código de respuesta 302).</summary>
+    </member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.RedirectMode.Off">
+      <summary>No realiza ninguna redirección automática (deshabilitada).</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.ResolverCachingMode"></member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.ResolverCachingMode.Static">
+      <summary />
+    </member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.ResolverCachingMode.Dynamic">
+      <summary />
+    </member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.ResolverCachingMode.Disabled">
+      <summary />
+    </member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.RouteCollectionExtensions"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.RouteCollectionExtensions.EnableFriendlyUrls(System.Web.Routing.RouteCollection)">
+      <summary> Habilita URL preparadas para páginas de formularios Web Forms. </summary>
+      <param name="routes">La colección de rutas.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.RouteCollectionExtensions.EnableFriendlyUrls(System.Web.Routing.RouteCollection,Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings)">
+      <summary>Habilita URL preparadas para páginas de formularios Web Forms.</summary>
+      <param name="routes">La colección de rutas.</param>
+      <param name="settings">La configuración que se usa al habilitar URL preparadas.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.RouteCollectionExtensions.EnableFriendlyUrls(System.Web.Routing.RouteCollection,Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings,Microsoft.AspNet.FriendlyUrls.Resolvers.IFriendlyUrlResolver[])">
+      <summary> Habilita URL preparadas mediante las resoluciones aprobadas. </summary>
+      <param name="routes">La colección de rutas.</param>
+      <param name="settings">La configuración que se usa al habilitar URL preparadas.</param>
+      <param name="resolvers">Las resoluciones de URL preparadas que se usan.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.RouteCollectionExtensions.EnableFriendlyUrls(System.Web.Routing.RouteCollection,Microsoft.AspNet.FriendlyUrls.Resolvers.IFriendlyUrlResolver[])">
+      <summary> Habilita URL preparadas mediante las resoluciones especificadas. </summary>
+      <param name="routes">La colección de rutas.</param>
+      <param name="resolvers">Las resoluciones de URL preparadas que se usan.</param>
+    </member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.Resolvers.FriendlyUrlResolver">
+      <summary>Resuelve una URL preparada en un controlador HTTP.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.FriendlyUrlResolver.#ctor(System.String)">
+      <summary>Crea un FriendlyUrlResolver para la extensión proporcionada.</summary>
+      <param name="fileExtension">La extensión del archivo físico que comprende la resolución. Debe incluir el punto inicial, por ejemplo, ".aspx".</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.FriendlyUrlResolver.ConvertToFriendlyUrl(System.String)">
+      <summary>Convierte una extensión URL típica completa en una extensión URL preparada sin extensión.</summary>
+      <returns>La URL preparada (sin extensión) si la resolución puede asignar automáticamente URL sin extensión a archivos físicos con la extensión proporcionada. De lo contrario, null.</returns>
+      <param name="path">La ruta de acceso original, incluida la extensión de archivo.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.FriendlyUrlResolver.GetExtensions(System.Web.HttpContextBase)">
+      <summary>Obtiene las extensiones que se usan al intentar resolver un controlador HTTP a partir de la URL preparada, por ejemplo, .aspx, .ashx, .mobile.aspx.</summary>
+      <returns>La lista de extensiones.</returns>
+      <param name="httpContext">HttpContext actual.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.FriendlyUrlResolver.PreprocessRequest(System.Web.HttpContextBase,System.Web.IHttpHandler)"></member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.Resolvers.GenericHandlerFriendlyUrlResolver">
+      <summary>Resuelve las URL preparadas en controladores genéricos, por ejemplo, *.ashx.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.GenericHandlerFriendlyUrlResolver.#ctor"></member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.Resolvers.IFriendlyUrlResolver"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.IFriendlyUrlResolver.ConvertToFriendlyUrl(System.String)"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.IFriendlyUrlResolver.GetExtensions(System.Web.HttpContextBase)"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.IFriendlyUrlResolver.PreprocessRequest(System.Web.HttpContextBase,System.Web.IHttpHandler)"></member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver">
+      <summary>Resuelve URL preparadas en páginas de formularios Web Forms.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.#ctor"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.GetExtensions(System.Web.HttpContextBase)">
+      <returns>Devuelve <see cref="T:System.Collections.Generic.IList`1" />.</returns>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.IsMobileExtension(System.Web.HttpContextBase,System.String)">
+      <returns>Devuelve <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.IsMobileView(System.Web.HttpContextBase)">
+      <summary>Determina si la URL preparada actual se resolvió para una vista móvil a partir del explorador del cliente o invalidaciones.</summary>
+      <returns>Si la vista actual es una vista móvil.</returns>
+      <param name="httpContext">Página.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.PreprocessRequest(System.Web.HttpContextBase,System.Web.IHttpHandler)"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.TrySetMasterPageFile(System.Web.UI.Page,System.String)">
+      <summary>Intenta definir la propiedad MasterPageFile para la página concreta en función de si existe la página maestra.</summary>
+      <returns>Un valor booleano que indica si se definió la página maestra.</returns>
+      <param name="page">Página.</param>
+      <param name="masterPageFile">La ruta de acceso virtual al archivo de la página maestra.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.TrySetMobileMasterPage(System.Web.HttpContextBase,System.Web.UI.Page,System.String)">
+      <summary>Intenta definir la propiedad MasterPageFile para la página con una página maestra específica móvil.</summary>
+      <returns>Un valor booleano que indica si se definió la página maestra.</returns>
+      <param name="httpContext">Contexto HTTP.</param>
+      <param name="page">Página.</param>
+    </member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.ViewSwitcherCookieName"></member>
+  </members>
+</doc>

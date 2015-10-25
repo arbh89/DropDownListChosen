@@ -1,0 +1,9 @@
+﻿<configuration>
+  <system.web>
+    <pages>
+      <controls>
+        <add tagPrefix="asp" assembly="DropDownListChosen" namespace="DropDownListChosen" />
+      </controls>
+    </pages>
+  </system.web>  
+</configuration>
