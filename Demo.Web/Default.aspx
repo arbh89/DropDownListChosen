@@ -5,4 +5,5 @@
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <asp:DropDownListChosen ID="ddlTest" DataPlaceHolder="Please select an option" AllowSingleDeselect="true" NoResultsText="No result found" DisableSearchThreshold="10" runat="server"></asp:DropDownListChosen>
     <asp:DropDownList ID="Dropdownlist1" runat="server"></asp:DropDownList>
+    <asp:Button ID="btnSubmit" Text="Click Me" runat="server" />
 </asp:Content>

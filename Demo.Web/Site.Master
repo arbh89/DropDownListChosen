@@ -25,6 +25,8 @@
                     <p class="site-title"><a runat="server" href="~/">DropDownListChosen DEMO</a></p>
                 </div>
                 <div class="float-right">
+                    <asp:HyperLink NavigateUrl="~/Default.aspx" runat="server" Text="Normal Demo" />
+                    <asp:HyperLink NavigateUrl="~/UpdatePanelDemo.aspx" runat="server" Text="UpdatePanel Demo" />
                 </div>
             </div>
         </header>

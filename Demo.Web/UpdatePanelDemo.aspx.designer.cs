@@ -10,7 +10,7 @@
 namespace Demo.Web {
     
     
-    public partial class _Default {
+    public partial class UpdatePanelDemo {
         
         /// <summary>
         /// ddlTest control.
