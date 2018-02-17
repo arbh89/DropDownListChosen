@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Drawing;
 using System.Web.UI;
@@ -158,7 +156,7 @@ namespace DropDownListChosen
             string script = string.Empty;
             ScriptManager stm = ScriptManager.GetCurrent(this.Page);
 
-            if (Common.FindControlParent(this, typeof(UpdatePanel)) && stm.IsInAsyncPostBack)
+            if (Common.FindControlParent(this, typeof(UpdatePanel)))
             {
                 script = string.Format(@"
                                 var prm_{0} = Sys.WebForms.PageRequestManager.getInstance();
